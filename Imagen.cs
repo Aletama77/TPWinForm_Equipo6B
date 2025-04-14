@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace TPWinForm_Equipo6B
 {
-    internal class Marcas
+    internal class Imagen
     {
-        public int id { get; set; }
-        public int descripcion { get; set; }
+        private int Id;
+
+        public string URL { get; set; }
     }
 }

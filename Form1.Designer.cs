@@ -1,6 +1,6 @@
 ﻿namespace TPWinForm_Equipo6B
 {
-    partial class Form1
+    partial class VentanaPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -46,6 +46,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.artículosToolStripMenuItem,
             this.marcasToolStripMenuItem,
@@ -53,7 +54,7 @@
             this.imágenesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1067, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -63,20 +64,21 @@
             this.verArtículoToolStripMenuItem,
             this.aBMArtículosToolStripMenuItem});
             this.artículosToolStripMenuItem.Name = "artículosToolStripMenuItem";
-            this.artículosToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.artículosToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.artículosToolStripMenuItem.Text = "Artículos";
             // 
             // verArtículoToolStripMenuItem
             // 
             this.verArtículoToolStripMenuItem.Name = "verArtículoToolStripMenuItem";
-            this.verArtículoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verArtículoToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
             this.verArtículoToolStripMenuItem.Text = "Ver Artículo";
             // 
             // aBMArtículosToolStripMenuItem
             // 
             this.aBMArtículosToolStripMenuItem.Name = "aBMArtículosToolStripMenuItem";
-            this.aBMArtículosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aBMArtículosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.aBMArtículosToolStripMenuItem.Text = "ABM Artículos";
+            this.aBMArtículosToolStripMenuItem.Click += new System.EventHandler(this.aBMArtículosToolStripMenuItem_Click);
             // 
             // marcasToolStripMenuItem
             // 
@@ -84,19 +86,19 @@
             this.verMarcasToolStripMenuItem,
             this.aMBMarcaToolStripMenuItem});
             this.marcasToolStripMenuItem.Name = "marcasToolStripMenuItem";
-            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.marcasToolStripMenuItem.Size = new System.Drawing.Size(70, 26);
             this.marcasToolStripMenuItem.Text = "Marcas";
             // 
             // verMarcasToolStripMenuItem
             // 
             this.verMarcasToolStripMenuItem.Name = "verMarcasToolStripMenuItem";
-            this.verMarcasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verMarcasToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.verMarcasToolStripMenuItem.Text = "Ver Marcas";
             // 
             // aMBMarcaToolStripMenuItem
             // 
             this.aMBMarcaToolStripMenuItem.Name = "aMBMarcaToolStripMenuItem";
-            this.aMBMarcaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aMBMarcaToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.aMBMarcaToolStripMenuItem.Text = "AMB Marca";
             // 
             // categoríasToolStripMenuItem
@@ -105,19 +107,19 @@
             this.verCategoríasToolStripMenuItem,
             this.aBMCategoríasToolStripMenuItem});
             this.categoríasToolStripMenuItem.Name = "categoríasToolStripMenuItem";
-            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(75, 20);
+            this.categoríasToolStripMenuItem.Size = new System.Drawing.Size(94, 26);
             this.categoríasToolStripMenuItem.Text = "Categorías";
             // 
             // verCategoríasToolStripMenuItem
             // 
             this.verCategoríasToolStripMenuItem.Name = "verCategoríasToolStripMenuItem";
-            this.verCategoríasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verCategoríasToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.verCategoríasToolStripMenuItem.Text = "Ver Categorías";
             // 
             // aBMCategoríasToolStripMenuItem
             // 
             this.aBMCategoríasToolStripMenuItem.Name = "aBMCategoríasToolStripMenuItem";
-            this.aBMCategoríasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aBMCategoríasToolStripMenuItem.Size = new System.Drawing.Size(199, 26);
             this.aBMCategoríasToolStripMenuItem.Text = "ABM Categorías";
             // 
             // imágenesToolStripMenuItem
@@ -126,31 +128,32 @@
             this.verImágenToolStripMenuItem,
             this.aBMImágenesToolStripMenuItem});
             this.imágenesToolStripMenuItem.Name = "imágenesToolStripMenuItem";
-            this.imágenesToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.imágenesToolStripMenuItem.Size = new System.Drawing.Size(87, 26);
             this.imágenesToolStripMenuItem.Text = "Imágenes";
             // 
             // verImágenToolStripMenuItem
             // 
             this.verImágenToolStripMenuItem.Name = "verImágenToolStripMenuItem";
-            this.verImágenToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verImágenToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.verImágenToolStripMenuItem.Text = "Ver Imágen";
             // 
             // aBMImágenesToolStripMenuItem
             // 
             this.aBMImágenesToolStripMenuItem.Name = "aBMImágenesToolStripMenuItem";
-            this.aBMImágenesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aBMImágenesToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.aBMImágenesToolStripMenuItem.Text = "ABM Imágenes";
             // 
-            // Form1
+            // VentanaPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Form1";
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Name = "VentanaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Menu Principal";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

@@ -17,10 +17,18 @@ namespace TPWinForm_Equipo6B
             InitializeComponent();
         }
 
-        private void aBMArtículosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void verArtículoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ABM_Articulo ventana = new ABM_Articulo();
-            ventana.ShowDialog();
+            ventana.MdiParent = this;   
+            ventana.Show();
+        }
+
+        private void aBMArtículosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ABM_Marcas ventana = new ABM_Marcas();
+            ventana.MdiParent = this;
+            ventana.Show();
         }
     }
 }

@@ -10,21 +10,12 @@ using System.Windows.Forms;
 
 namespace TPWinForm_Equipo6B
 {
-    public partial class ABM_Articulo : Form
+    public partial class ABM_Marcas : Form
     {
-        public ABM_Articulo()
+        public ABM_Marcas()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

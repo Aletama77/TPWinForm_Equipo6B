@@ -30,5 +30,12 @@ namespace TPWinForm_Equipo6B
             ventana.MdiParent = this;
             ventana.Show();
         }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ABM_Categorias ventana = new ABM_Categorias();
+            ventana.MdiParent = this;
+            ventana.Show();
+        }
     }
 }

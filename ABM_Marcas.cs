@@ -19,6 +19,11 @@ namespace TPWinForm_Equipo6B
 
         private void button1_Click(object sender, EventArgs e)
         {
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(CrearMarca))
+                    return;
+            }
             CrearMarca ventana = new CrearMarca();
             ventana.ShowDialog();
         }

@@ -40,7 +40,7 @@
             // textPrecio
             // 
             this.textPrecio.Location = new System.Drawing.Point(24, 48);
-            this.textPrecio.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textPrecio.Margin = new System.Windows.Forms.Padding(2);
             this.textPrecio.Name = "textPrecio";
             this.textPrecio.Size = new System.Drawing.Size(86, 20);
             this.textPrecio.TabIndex = 15;
@@ -59,7 +59,7 @@
             // 
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.Location = new System.Drawing.Point(114, 32);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(33, 35);
             this.button4.TabIndex = 17;
@@ -68,7 +68,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(160, 34);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 31);
             this.button1.TabIndex = 18;
@@ -81,7 +81,7 @@
             this.dataGridViewMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewMarca.Location = new System.Drawing.Point(47, 134);
-            this.dataGridViewMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewMarca.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewMarca.Name = "dataGridViewMarca";
             this.dataGridViewMarca.RowHeadersWidth = 51;
             this.dataGridViewMarca.RowTemplate.Height = 24;
@@ -98,7 +98,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textPrecio);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ABM_Marcas";
             this.Text = "ABM_Marcas";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarca)).EndInit();

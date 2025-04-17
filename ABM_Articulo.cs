@@ -19,7 +19,8 @@ namespace TPWinForm_Equipo6B
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            CrearArticulo ventana = new CrearArticulo();
+            ventana.ShowDialog();
         }
 
         private void label6_Click(object sender, EventArgs e)

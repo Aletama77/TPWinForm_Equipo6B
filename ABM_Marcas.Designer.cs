@@ -33,6 +33,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.dataGridViewMarca = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarca)).BeginInit();
             this.SuspendLayout();
             // 
             // textPrecio
@@ -50,7 +52,6 @@
             this.label5.Size = new System.Drawing.Size(45, 16);
             this.label5.TabIndex = 16;
             this.label5.Text = "Marca";
-            
             // 
             // button4
             // 
@@ -70,17 +71,30 @@
             this.button1.Text = "Crear";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // dataGridViewMarca
+            // 
+            this.dataGridViewMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMarca.Location = new System.Drawing.Point(63, 165);
+            this.dataGridViewMarca.Name = "dataGridViewMarca";
+            this.dataGridViewMarca.RowHeadersWidth = 51;
+            this.dataGridViewMarca.RowTemplate.Height = 24;
+            this.dataGridViewMarca.Size = new System.Drawing.Size(675, 178);
+            this.dataGridViewMarca.TabIndex = 19;
+            // 
             // ABM_Marcas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridViewMarca);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textPrecio);
             this.Name = "ABM_Marcas";
             this.Text = "ABM_Marcas";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarca)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,5 +106,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridViewMarca;
     }
 }

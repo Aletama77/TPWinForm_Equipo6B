@@ -74,6 +74,24 @@
     <Compile Include="CrearArticulo.Designer.cs">
       <DependentUpon>CrearArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrearMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearMarca.Designer.cs">
+      <DependentUpon>CrearMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarMarca.Designer.cs">
+      <DependentUpon>EditarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminacionMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminacionMarca.Designer.cs">
+      <DependentUpon>EliminacionMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +113,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CrearArticulo.resx">
       <DependentUpon>CrearArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearMarca.resx">
+      <DependentUpon>CrearMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarMarca.resx">
+      <DependentUpon>EditarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminacionMarca.resx">
+      <DependentUpon>EliminacionMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace TPWinForm_Equipo6B
 {
-    public partial class ABM_Marcas : Form
+    public partial class EditarMarca : Form
     {
-        public ABM_Marcas()
+        public EditarMarca()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            CrearMarca ventana = new CrearMarca();
-            ventana.ShowDialog();
         }
     }
 }

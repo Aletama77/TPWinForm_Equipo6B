@@ -52,5 +52,7 @@ namespace TPWinForm_Equipo6B
             ventana.MdiParent = this;
             ventana.Show();
         }
+
+       
     }
 }

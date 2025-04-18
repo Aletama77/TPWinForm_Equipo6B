@@ -74,11 +74,23 @@
     <Compile Include="CrearArticulo.Designer.cs">
       <DependentUpon>CrearArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrearCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearCategoria.Designer.cs">
+      <DependentUpon>CrearCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="CrearMarca.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CrearMarca.Designer.cs">
       <DependentUpon>CrearMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarCategoria.Designer.cs">
+      <DependentUpon>EditarCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="EditarMarca.cs">
       <SubType>Form</SubType>
@@ -91,6 +103,12 @@
     </Compile>
     <Compile Include="EliminacionMarca.Designer.cs">
       <DependentUpon>EliminacionMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarCategoria.Designer.cs">
+      <DependentUpon>EliminarCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallaPrincipal.cs">
       <SubType>Form</SubType>
@@ -114,14 +132,23 @@
     <EmbeddedResource Include="CrearArticulo.resx">
       <DependentUpon>CrearArticulo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrearCategoria.resx">
+      <DependentUpon>CrearCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrearMarca.resx">
       <DependentUpon>CrearMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarCategoria.resx">
+      <DependentUpon>EditarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditarMarca.resx">
       <DependentUpon>EditarMarca.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminacionMarca.resx">
       <DependentUpon>EliminacionMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarCategoria.resx">
+      <DependentUpon>EliminarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>

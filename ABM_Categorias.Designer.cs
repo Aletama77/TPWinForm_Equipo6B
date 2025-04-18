@@ -34,6 +34,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textPrecio = new System.Windows.Forms.TextBox();
             this.dataGridViewCat = new System.Windows.Forms.DataGridView();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCat)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +49,7 @@
             this.button1.TabIndex = 22;
             this.button1.Text = "Crear";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
@@ -78,12 +82,38 @@
             // 
             this.dataGridViewCat.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewCat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCat.Location = new System.Drawing.Point(57, 188);
+            this.dataGridViewCat.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Descripcion,
+            this.Editar,
+            this.Eliminar});
+            this.dataGridViewCat.Location = new System.Drawing.Point(31, 201);
             this.dataGridViewCat.Name = "dataGridViewCat";
             this.dataGridViewCat.RowHeadersWidth = 51;
             this.dataGridViewCat.RowTemplate.Height = 24;
-            this.dataGridViewCat.Size = new System.Drawing.Size(675, 178);
+            this.dataGridViewCat.Size = new System.Drawing.Size(712, 178);
             this.dataGridViewCat.TabIndex = 23;
+            this.dataGridViewCat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCat_CellContentClick);
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.MinimumWidth = 6;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.Width = 125;
+            // 
+            // Editar
+            // 
+            this.Editar.HeaderText = "Editar";
+            this.Editar.MinimumWidth = 6;
+            this.Editar.Name = "Editar";
+            this.Editar.Width = 125;
+            // 
+            // Eliminar
+            // 
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.MinimumWidth = 6;
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Width = 125;
             // 
             // ABM_Categorias
             // 
@@ -95,7 +125,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textPrecio);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ABM_Categorias";
             this.Text = "ABM_Categorías";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCat)).EndInit();
@@ -111,5 +141,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textPrecio;
         private System.Windows.Forms.DataGridView dataGridViewCat;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewButtonColumn Editar;
+        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
     }
 }

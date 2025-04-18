@@ -16,5 +16,17 @@ namespace TPWinForm_Equipo6B
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CrearCategoria ventana= new CrearCategoria();
+            ventana.Show();
+        }
+
+        private void dataGridViewCat_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EliminarCategoria ventana = new EliminarCategoria();   
+            ventana.Show(); 
+        }
     }
 }

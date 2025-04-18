@@ -48,14 +48,81 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABM_Articulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM_Articulo.Designer.cs">
+      <DependentUpon>ABM_Articulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABM_Categorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM_Categorias.Designer.cs">
+      <DependentUpon>ABM_Categorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ABM_Marcas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABM_Marcas.Designer.cs">
+      <DependentUpon>ABM_Marcas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Articulo.cs" />
+    <Compile Include="Categoria.cs" />
+    <Compile Include="CrearArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearArticulo.Designer.cs">
+      <DependentUpon>CrearArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrearMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearMarca.Designer.cs">
+      <DependentUpon>CrearMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditarMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarMarca.Designer.cs">
+      <DependentUpon>EditarMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EliminacionMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminacionMarca.Designer.cs">
+      <DependentUpon>EliminacionMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PantallaPrincipal.Designer.cs">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Imagen.cs" />
+    <Compile Include="Marca.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ABM_Articulo.resx">
+      <DependentUpon>ABM_Articulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABM_Categorias.resx">
+      <DependentUpon>ABM_Categorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ABM_Marcas.resx">
+      <DependentUpon>ABM_Marcas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearArticulo.resx">
+      <DependentUpon>CrearArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearMarca.resx">
+      <DependentUpon>CrearMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditarMarca.resx">
+      <DependentUpon>EditarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminacionMarca.resx">
+      <DependentUpon>EliminacionMarca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -80,16 +147,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\dominio\dominio.csproj">
-      <Project>{dc878eb4-a514-4c92-95f5-fa14adf097e5}</Project>
-      <Name>dominio</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\negocio\negocio.csproj">
-      <Project>{21e60c1e-2866-4d42-b7c0-b2fc4533eec0}</Project>
-      <Name>negocio</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

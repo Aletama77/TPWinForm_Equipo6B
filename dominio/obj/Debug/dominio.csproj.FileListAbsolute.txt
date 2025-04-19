@@ -1,0 +1,6 @@
+C:\Users\Alex\source\dominio\bin\Debug\dominio.dll
+C:\Users\Alex\source\dominio\bin\Debug\dominio.pdb
+C:\Users\Alex\source\dominio\obj\Debug\dominio.csproj.AssemblyReference.cache
+C:\Users\Alex\source\dominio\obj\Debug\dominio.csproj.CoreCompileInputs.cache
+C:\Users\Alex\source\dominio\obj\Debug\dominio.dll
+C:\Users\Alex\source\dominio\obj\Debug\dominio.pdb

@@ -1,0 +1,9 @@
+C:\Users\Alex\source\negocio\bin\Debug\negocio.dll
+C:\Users\Alex\source\negocio\bin\Debug\negocio.pdb
+C:\Users\Alex\source\negocio\bin\Debug\dominio.dll
+C:\Users\Alex\source\negocio\bin\Debug\dominio.pdb
+C:\Users\Alex\source\negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
+C:\Users\Alex\source\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\Users\Alex\source\negocio\obj\Debug\negocio.csproj.Up2Date
+C:\Users\Alex\source\negocio\obj\Debug\negocio.dll
+C:\Users\Alex\source\negocio\obj\Debug\negocio.pdb

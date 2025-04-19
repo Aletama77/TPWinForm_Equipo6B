@@ -17,42 +17,6 @@ namespace TPWinForm_Equipo6B
             InitializeComponent();
         }
 
-private void btnAgregarCategoria_Click(object sender, EventArgs e)
-{
-
-    MessageBox.Show("Confirmado");
-
-    string descripcion = TxtDescripcioncategorias.Text.Trim();
-
-    if (string.IsNullOrEmpty(descripcion))
-    {
-        MessageBox.Show("Por favor, ingrese una descripción.");
-        return;
-    }
-
-    AccesoDatos datos = new AccesoDatos();
-
-    try
-    {
-        MessageBox.Show("Procediendo a insertar en la base de datos...");
-
-        datos.setearConsulta("INSERT INTO CATEGORIAS (Descripcion) VALUES (@descripcion)");
-        datos.agregarParametro("@descripcion", descripcion);
-        datos.ejecutarAccion();
-
-        MessageBox.Show("Categoría agregada correctamente.");
-        this.Close();
-    }
-    catch (Exception ex)
-    {
-        MessageBox.Show("Error al agregar la categoría: " + ex.Message);
-    }
-    finally
-    {
-        datos.cerrarConexion();
+      
     }
 }
-
-    }
-}
-

@@ -57,7 +57,6 @@
             this.btnAgregarCategoria.TabIndex = 2;
             this.btnAgregarCategoria.Text = "Agregar";
             this.btnAgregarCategoria.UseVisualStyleBackColor = true;
-            this.btnAgregarCategoria.Click += new System.EventHandler(this.btnAgregarCategoria_Click);  // Aquí se asocia el evento Click
             // 
             // CrearCategoria
             // 

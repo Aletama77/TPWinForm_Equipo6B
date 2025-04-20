@@ -54,7 +54,7 @@ namespace TPWinForm_Equipo6B
                     tabla.Load(datos.Lector);
                     // Asignar el DataTable al DataGridView
                     dataGridViewArt.DataSource = tabla;
-                    //dataGridViewArt.Columns["A.IdMarca"].Visible = false; // Ocultar la columna Id
+                    dataGridViewArt.Columns["Id"].Visible = false; // Ocultar la columna Id
                 }
                 catch (Exception ex)
                 {
@@ -195,7 +195,7 @@ namespace TPWinForm_Equipo6B
                     tabla.Load(datos.Lector);
                     // Asignar el DataTable al DataGridView
                     dataGridViewArt.DataSource = tabla;
-                    dataGridViewArt.Columns["A.Id"].Visible = false; // Ocultar la columna Id
+                    dataGridViewArt.Columns["Id"].Visible = false; // Ocultar la columna Id
                 }
                 catch (Exception ex)
                 {

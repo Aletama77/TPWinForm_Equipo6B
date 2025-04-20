@@ -46,65 +46,64 @@
             // editarArtIDCat
             // 
             this.editarArtIDCat.FormattingEnabled = true;
-            this.editarArtIDCat.Location = new System.Drawing.Point(23, 243);
-            this.editarArtIDCat.Margin = new System.Windows.Forms.Padding(2);
+            this.editarArtIDCat.Location = new System.Drawing.Point(31, 299);
+            this.editarArtIDCat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editarArtIDCat.Name = "editarArtIDCat";
-            this.editarArtIDCat.Size = new System.Drawing.Size(132, 21);
+            this.editarArtIDCat.Size = new System.Drawing.Size(175, 24);
             this.editarArtIDCat.TabIndex = 51;
             // 
             // editarArtIDMarca
             // 
             this.editarArtIDMarca.FormattingEnabled = true;
-            this.editarArtIDMarca.Location = new System.Drawing.Point(23, 194);
-            this.editarArtIDMarca.Margin = new System.Windows.Forms.Padding(2);
+            this.editarArtIDMarca.Location = new System.Drawing.Point(31, 239);
+            this.editarArtIDMarca.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editarArtIDMarca.Name = "editarArtIDMarca";
-            this.editarArtIDMarca.Size = new System.Drawing.Size(132, 21);
+            this.editarArtIDMarca.Size = new System.Drawing.Size(175, 24);
             this.editarArtIDMarca.TabIndex = 50;
             // 
             // editarArtCodigo
             // 
             this.editarArtCodigo.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.editarArtCodigo.Location = new System.Drawing.Point(23, 51);
-            this.editarArtCodigo.Margin = new System.Windows.Forms.Padding(2);
+            this.editarArtCodigo.Location = new System.Drawing.Point(31, 63);
+            this.editarArtCodigo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editarArtCodigo.Name = "editarArtCodigo";
-            this.editarArtCodigo.Size = new System.Drawing.Size(132, 20);
+            this.editarArtCodigo.Size = new System.Drawing.Size(175, 22);
             this.editarArtCodigo.TabIndex = 49;
             // 
             // editarArtNombre
             // 
             this.editarArtNombre.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.editarArtNombre.Location = new System.Drawing.Point(23, 97);
-            this.editarArtNombre.Margin = new System.Windows.Forms.Padding(2);
+            this.editarArtNombre.Location = new System.Drawing.Point(31, 119);
+            this.editarArtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editarArtNombre.Name = "editarArtNombre";
-            this.editarArtNombre.Size = new System.Drawing.Size(132, 20);
+            this.editarArtNombre.Size = new System.Drawing.Size(175, 22);
             this.editarArtNombre.TabIndex = 48;
             // 
             // editarArtPrecio
             // 
             this.editarArtPrecio.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.editarArtPrecio.Location = new System.Drawing.Point(23, 294);
-            this.editarArtPrecio.Margin = new System.Windows.Forms.Padding(2);
+            this.editarArtPrecio.Location = new System.Drawing.Point(31, 362);
+            this.editarArtPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editarArtPrecio.Name = "editarArtPrecio";
-            this.editarArtPrecio.Size = new System.Drawing.Size(132, 20);
+            this.editarArtPrecio.Size = new System.Drawing.Size(175, 22);
             this.editarArtPrecio.TabIndex = 47;
             // 
             // editarArtDesc
             // 
             this.editarArtDesc.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.editarArtDesc.Location = new System.Drawing.Point(23, 146);
-            this.editarArtDesc.Margin = new System.Windows.Forms.Padding(2);
+            this.editarArtDesc.Location = new System.Drawing.Point(31, 180);
+            this.editarArtDesc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editarArtDesc.Name = "editarArtDesc";
-            this.editarArtDesc.Size = new System.Drawing.Size(132, 20);
+            this.editarArtDesc.Size = new System.Drawing.Size(175, 22);
             this.editarArtDesc.TabIndex = 46;
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 178);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(28, 219);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 13);
+            this.label6.Size = new System.Drawing.Size(56, 16);
             this.label6.TabIndex = 45;
             this.label6.Text = "IdMarca";
             // 
@@ -112,10 +111,9 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 228);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(28, 281);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 13);
+            this.label5.Size = new System.Drawing.Size(77, 16);
             this.label5.TabIndex = 44;
             this.label5.Text = "IdCategoría";
             // 
@@ -123,10 +121,9 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 278);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(28, 342);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.Size = new System.Drawing.Size(46, 16);
             this.label4.TabIndex = 43;
             this.label4.Text = "Precio";
             // 
@@ -134,10 +131,9 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 128);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(28, 158);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.Size = new System.Drawing.Size(79, 16);
             this.label3.TabIndex = 42;
             this.label3.Text = "Descripción";
             // 
@@ -145,10 +141,9 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(21, 80);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(28, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 41;
             this.label2.Text = "Nombre";
             // 
@@ -156,29 +151,29 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(28, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(51, 16);
             this.label1.TabIndex = 40;
             this.label1.Text = "Código";
             // 
             // ConfirArticuloBoton
             // 
             this.ConfirArticuloBoton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ConfirArticuloBoton.Location = new System.Drawing.Point(211, 51);
-            this.ConfirArticuloBoton.Margin = new System.Windows.Forms.Padding(2);
+            this.ConfirArticuloBoton.Location = new System.Drawing.Point(281, 63);
+            this.ConfirArticuloBoton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ConfirArticuloBoton.Name = "ConfirArticuloBoton";
-            this.ConfirArticuloBoton.Size = new System.Drawing.Size(86, 31);
+            this.ConfirArticuloBoton.Size = new System.Drawing.Size(115, 38);
             this.ConfirArticuloBoton.TabIndex = 39;
             this.ConfirArticuloBoton.Text = "Confirmar";
             this.ConfirArticuloBoton.UseVisualStyleBackColor = true;
+            this.ConfirArticuloBoton.Click += new System.EventHandler(this.ConfirArticuloBoton_Click_1);
             // 
             // EditarArticulo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.editarArtIDCat);
             this.Controls.Add(this.editarArtIDMarca);
             this.Controls.Add(this.editarArtCodigo);
@@ -192,6 +187,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ConfirArticuloBoton);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EditarArticulo";
             this.Text = "EditarArticulo";
             this.ResumeLayout(false);

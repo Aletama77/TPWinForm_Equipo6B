@@ -28,9 +28,189 @@ namespace TPWinForm_Equipo6B
             ventana.ShowDialog();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+
+
+        private void button4_Click(object sender, EventArgs e)
         {
+            string categoriaBuscada = textBox2.Text.Trim();
+            string marcaBuscada = textBox1.Text.Trim();
+            string descripcionBuscada = textNombre.Text.Trim();
+            string codigoBuscada = textBox5.Text.Trim();
+            string nombreBuscada = textBox4.Text.Trim();
+            string precioBuscada = textBox3.Text.Trim();
+
+            AccesoDatos datos = new AccesoDatos();
+            if (string.IsNullOrEmpty(marcaBuscada) && string.IsNullOrEmpty(categoriaBuscada) && string.IsNullOrEmpty(descripcionBuscada) && string.IsNullOrEmpty(codigoBuscada)&& string.IsNullOrEmpty(nombreBuscada)&& string.IsNullOrEmpty(precioBuscada))
+            {
+
+                try
+                {
+                    string consulta = "SELECT M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A INNER JOIN MARCAS M ON A.ID = M.ID INNER JOIN CATEGORIAS C ON A.Id = C.Id"; //
+                    datos.setearConsulta(consulta);
+
+                    datos.ejecutarLectura();
+
+                    DataTable tabla = new DataTable();
+                    tabla.Load(datos.Lector);
+                    // Asignar el DataTable al DataGridView
+                    dataGridViewArt.DataSource = tabla;
+                    //dataGridViewArt.Columns["A.IdMarca"].Visible = false; // Ocultar la columna Id
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al buscar el Articulo: " + ex.Message);
+                }
+                finally
+                {
+                    datos.cerrarConexion();
+                }
+            }
+
+            if (!string.IsNullOrEmpty(marcaBuscada))
+            {
+                try
+                {
+                    string consulta = "SELECT M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A INNER JOIN MARCAS M ON A.ID = M.ID INNER JOIN CATEGORIAS C ON A.Id = C.Id WHERE M.Descripcion LIKE @descripcion";
+                    datos.setearConsulta(consulta);
+                    datos.agregarParametro("@descripcion", "%" + marcaBuscada + "%");
+                    datos.ejecutarLectura();
+
+                    DataTable tabla = new DataTable();
+                    tabla.Load(datos.Lector);
+                    // Asignar el DataTable al DataGridView
+                    dataGridViewArt.DataSource = tabla;
+                    //dataGridViewArt.Columns["Id"].Visible = false; // Ocultar la columna Id
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al buscar la marca: " + ex.Message);
+                }
+                finally
+                {
+                    datos.cerrarConexion();
+                }
+            } else if (!string.IsNullOrEmpty(descripcionBuscada))
+            {
+                try
+                {
+                    string consulta = "SELECT M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A INNER JOIN MARCAS M ON A.ID = M.ID INNER JOIN CATEGORIAS C ON A.Id = C.Id WHERE A.Descripcion LIKE @descripcion";
+                    datos.setearConsulta(consulta);
+                    datos.agregarParametro("@descripcion", "%" + descripcionBuscada + "%");
+                    datos.ejecutarLectura();
+
+                    DataTable tabla = new DataTable();
+                    tabla.Load(datos.Lector);
+                    // Asignar el DataTable al DataGridView
+                    dataGridViewArt.DataSource = tabla;
+                    //dataGridViewArt.Columns["Id"].Visible = false; // Ocultar la columna Id
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al buscar la descripcion: " + ex.Message);
+                }
+                finally
+                {
+                    datos.cerrarConexion();
+                }
+            } else if (!string.IsNullOrEmpty(codigoBuscada))
+            {
+                try
+                {
+                    string consulta = "SELECT M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A INNER JOIN MARCAS M ON A.ID = M.ID INNER JOIN CATEGORIAS C ON A.Id = C.Id WHERE A.Codigo LIKE @descripcion";
+                    datos.setearConsulta(consulta);
+                    datos.agregarParametro("@descripcion", "%" + codigoBuscada + "%");
+                    datos.ejecutarLectura();
+
+                    DataTable tabla = new DataTable();
+                    tabla.Load(datos.Lector);
+                    // Asignar el DataTable al DataGridView
+                    dataGridViewArt.DataSource = tabla;
+                    //dataGridViewArt.Columns["Id"].Visible = false; // Ocultar la columna Id
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al buscar el codigo: " + ex.Message);
+                }
+                finally
+                {
+                    datos.cerrarConexion();
+                }
+            } else if (!string.IsNullOrEmpty(nombreBuscada))
+            {
+                try
+                {
+                    string consulta = "SELECT M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A INNER JOIN MARCAS M ON A.ID = M.ID INNER JOIN CATEGORIAS C ON A.Id = C.Id WHERE A.Nombre LIKE @descripcion";
+                    datos.setearConsulta(consulta);
+                    datos.agregarParametro("@descripcion", "%" + nombreBuscada + "%");
+                    datos.ejecutarLectura();
+
+                    DataTable tabla = new DataTable();
+                    tabla.Load(datos.Lector);
+                    // Asignar el DataTable al DataGridView
+                    dataGridViewArt.DataSource = tabla;
+                    //dataGridViewArt.Columns["Id"].Visible = false; // Ocultar la columna Id
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al buscar el nombre: " + ex.Message);
+                }
+                finally
+                {
+                    datos.cerrarConexion();
+                }
+            } else if (!string.IsNullOrEmpty(precioBuscada))
+            {
+                try
+                {
+                    string consulta = "SELECT M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A INNER JOIN MARCAS M ON A.ID = M.ID INNER JOIN CATEGORIAS C ON A.Id = C.Id WHERE A.Precio LIKE @descripcion";
+                    datos.setearConsulta(consulta);
+                    datos.agregarParametro("@descripcion", "%" + precioBuscada + "%");
+                    datos.ejecutarLectura();
+
+                    DataTable tabla = new DataTable();
+                    tabla.Load(datos.Lector);
+                    // Asignar el DataTable al DataGridView
+                    dataGridViewArt.DataSource = tabla;
+                    //dataGridViewArt.Columns["Id"].Visible = false; // Ocultar la columna Id
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al buscar el precio: " + ex.Message);
+                }
+                finally
+                {
+                    datos.cerrarConexion();
+                }
+            }else if (!string.IsNullOrEmpty(categoriaBuscada))
+            {
+                try
+                {
+                    string consulta = "SELECT M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A INNER JOIN MARCAS M ON A.ID = M.ID INNER JOIN CATEGORIAS C ON A.Id = C.Id WHERE C.Descripcion LIKE @descripcion";
+                    datos.setearConsulta(consulta);
+                    datos.agregarParametro("@descripcion", "%" + categoriaBuscada + "%");
+                    datos.ejecutarLectura();
+
+                    DataTable tabla = new DataTable();
+                    tabla.Load(datos.Lector);
+                    // Asignar el DataTable al DataGridView
+                    dataGridViewArt.DataSource = tabla;
+                    //dataGridViewArt.Columns["Id"].Visible = false; // Ocultar la columna Id
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al buscar el precio: " + ex.Message);
+                }
+                finally
+                {
+                    datos.cerrarConexion();
+                }
+            }
+
 
         }
+
+
+
+
     }
 }

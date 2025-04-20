@@ -55,20 +55,49 @@ namespace TPWinForm_Equipo6B
                 {
                     datos.cerrarConexion();
                 }
+            }else if (dataGridViewCat.Columns[e.ColumnIndex].Name == "Editar")
+            {
+                AccesoDatos datos = new AccesoDatos();
+                int idCategoria = Convert.ToInt32(dataGridViewCat.Rows[e.RowIndex].Cells["Id"].Value);
+
+                EditarCategoria ventana = new EditarCategoria(idCategoria);
+                ventana.Show();
+
+
             }
         }
 
 
         private void botonBuscarCategoria_Click(object sender, EventArgs e)
         {
+            AccesoDatos datos = new AccesoDatos();
             string categoriaBuscada = textCategoria.Text.Trim();
             if (string.IsNullOrEmpty(categoriaBuscada))
             {
-                MessageBox.Show("Por favor ingrese un nombre de categoría para buscar.");
-                return;
+                try
+                {
+                    string consulta = "SELECT Id, Descripcion FROM CATEGORIAS";
+                    datos.setearConsulta(consulta);
+                    
+                    datos.ejecutarLectura();
+
+                    DataTable tabla = new DataTable();
+                    tabla.Load(datos.Lector);
+                    // Asignar el DataTable al DataGridView
+                    dataGridViewCat.DataSource = tabla;
+                    dataGridViewCat.Columns["Id"].Visible = false; // Ocultar la columna Id
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al buscar la categoría: " + ex.Message);
+                }
+                finally
+                {
+                    datos.cerrarConexion();
+                }
             }
 
-            AccesoDatos datos = new AccesoDatos();
+            
 
             try
             {

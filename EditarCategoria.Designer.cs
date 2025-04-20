@@ -57,6 +57,7 @@
             this.BtnConfirmar.TabIndex = 2;
             this.BtnConfirmar.Text = "Confirmar";
             this.BtnConfirmar.UseVisualStyleBackColor = true;
+            this.BtnConfirmar.Click += new System.EventHandler(this.BtnConfirmar_Click);
             // 
             // EditarCategoria
             // 

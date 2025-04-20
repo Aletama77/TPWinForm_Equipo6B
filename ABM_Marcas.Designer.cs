@@ -93,6 +93,7 @@
             this.dataGridViewMarca.RowTemplate.Height = 24;
             this.dataGridViewMarca.Size = new System.Drawing.Size(675, 178);
             this.dataGridViewMarca.TabIndex = 19;
+            this.dataGridViewMarca.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMarca_CellContentClick);
             // 
             // Eliminar
             // 

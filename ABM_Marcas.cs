@@ -67,5 +67,41 @@ namespace TPWinForm_Equipo6B
         {
             button4.Enabled = !string.IsNullOrWhiteSpace(textMarca.Text);
         }
+
+        private void dataGridViewMarca_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+
+            if (dataGridViewMarca.Columns[e.ColumnIndex].Name == "Eliminar")
+            {
+                AccesoDatos datos = new AccesoDatos();
+                int idMarca = Convert.ToInt32(dataGridViewMarca.Rows[e.RowIndex].Cells["Id"].Value);
+
+                try
+                {
+
+                    datos.setearConsulta("DELETE FROM MARCAS WHERE Id = @id");
+                    datos.agregarParametro("@id", idMarca);
+                    datos.ejecutarAccion();
+
+
+                    // Eliminar la fila del DataGridView sin recargar todo
+                    dataGridViewMarca.Rows.RemoveAt(e.RowIndex);
+
+                    MessageBox.Show("Marca eliminada correctamente." + idMarca);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al eliminar la marca: " + ex.Message);
+                }
+                finally
+                {
+                    datos.cerrarConexion();
+                }
+            }
+
+
+        }
     }
 }

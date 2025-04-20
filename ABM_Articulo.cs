@@ -45,7 +45,7 @@ namespace TPWinForm_Equipo6B
 
                 try
                 {
-                    string consulta = "SELECT M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id"; 
+                    string consulta = "SELECT A.Id, M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id"; 
                     datos.setearConsulta(consulta);
 
                     datos.ejecutarLectura();
@@ -70,7 +70,7 @@ namespace TPWinForm_Equipo6B
             {
                 try
                 {
-                    string consulta = "SELECT M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE M.Descripcion LIKE @descripcion";
+                    string consulta = "SELECT A.Id, M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE M.Descripcion LIKE @descripcion";
                     datos.setearConsulta(consulta);
                     datos.agregarParametro("@descripcion", "%" + marcaBuscada + "%");
                     datos.ejecutarLectura();
@@ -93,7 +93,7 @@ namespace TPWinForm_Equipo6B
             {
                 try
                 {
-                    string consulta = "SELECT M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE A.Descripcion LIKE @descripcion";
+                    string consulta = "SELECT A.Id, M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE A.Descripcion LIKE @descripcion";
                     datos.setearConsulta(consulta);
                     datos.agregarParametro("@descripcion", "%" + descripcionBuscada + "%");
                     datos.ejecutarLectura();
@@ -116,7 +116,7 @@ namespace TPWinForm_Equipo6B
             {
                 try
                 {
-                    string consulta = "SELECT M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE A.Codigo LIKE @descripcion";
+                    string consulta = "SELECT A.Id, M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE A.Codigo LIKE @descripcion";
                     datos.setearConsulta(consulta);
                     datos.agregarParametro("@descripcion", "%" + codigoBuscada + "%");
                     datos.ejecutarLectura();
@@ -139,7 +139,7 @@ namespace TPWinForm_Equipo6B
             {
                 try
                 {
-                    string consulta = "SELECT M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE A.Nombre LIKE @descripcion";
+                    string consulta = "SELECT A.Id, M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE A.Nombre LIKE @descripcion";
                     datos.setearConsulta(consulta);
                     datos.agregarParametro("@descripcion", "%" + nombreBuscada + "%");
                     datos.ejecutarLectura();
@@ -162,7 +162,7 @@ namespace TPWinForm_Equipo6B
             {
                 try
                 {
-                    string consulta = "SELECT M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE A.Precio LIKE @descripcion";
+                    string consulta = "SELECT A.Id, M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE A.Precio LIKE @descripcion";
                     datos.setearConsulta(consulta);
                     datos.agregarParametro("@descripcion", "%" + precioBuscada + "%");
                     datos.ejecutarLectura();
@@ -172,6 +172,7 @@ namespace TPWinForm_Equipo6B
                     // Asignar el DataTable al DataGridView
                     dataGridViewArt.DataSource = tabla;
                     //dataGridViewArt.Columns["Id"].Visible = false; // Ocultar la columna Id
+
                 }
                 catch (Exception ex)
                 {
@@ -185,7 +186,7 @@ namespace TPWinForm_Equipo6B
             {
                 try
                 {
-                    string consulta = "SELECT M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE C.Descripcion LIKE @descripcion";
+                    string consulta = "SELECT A.Id, M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE C.Descripcion LIKE @descripcion";
                     datos.setearConsulta(consulta);
                     datos.agregarParametro("@descripcion", "%" + categoriaBuscada + "%");
                     datos.ejecutarLectura();
@@ -194,7 +195,7 @@ namespace TPWinForm_Equipo6B
                     tabla.Load(datos.Lector);
                     // Asignar el DataTable al DataGridView
                     dataGridViewArt.DataSource = tabla;
-                    //dataGridViewArt.Columns["Id"].Visible = false; // Ocultar la columna Id
+                    dataGridViewArt.Columns["A.Id"].Visible = false; // Ocultar la columna Id
                 }
                 catch (Exception ex)
                 {
@@ -208,5 +209,46 @@ namespace TPWinForm_Equipo6B
 
         }
 
+        private void dataGridViewArt_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+
+            if (dataGridViewArt.Columns[e.ColumnIndex].Name == "Eliminar")
+            {
+                AccesoDatos datos = new AccesoDatos();
+                int idArticulo = Convert.ToInt32(dataGridViewArt.Rows[e.RowIndex].Cells["Id"].Value);
+
+                try
+                {
+
+                    datos.setearConsulta("DELETE FROM ARTICULOS WHERE Id = @Id");
+                    datos.agregarParametro("@Id", idArticulo);
+                    datos.ejecutarAccion();
+
+
+                    // Eliminar la fila del DataGridView sin recargar todo
+                    dataGridViewArt.Rows.RemoveAt(e.RowIndex);
+
+                    MessageBox.Show("Articulo eliminado correctamente." + idArticulo);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al eliminar el Artículo: " + ex.Message);
+                }
+                finally
+                {
+                    datos.cerrarConexion();
+                }
+            }
+            else if (dataGridViewArt.Columns[e.ColumnIndex].Name == "Editar")
+            {
+                int idArticulo = Convert.ToInt32(dataGridViewArt.Rows[e.RowIndex].Cells["Id"].Value);
+
+                EditarArticulo editararticulo = new EditarArticulo(idArticulo);
+                editararticulo.Show();
+
+            }
+        }
     }
 }

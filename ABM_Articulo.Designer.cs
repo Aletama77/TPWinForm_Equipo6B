@@ -44,9 +44,9 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.dataGridViewArt = new System.Windows.Forms.DataGridView();
-            this.Imagen = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Update = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.VerImagen = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArt)).BeginInit();
             this.SuspendLayout();
             // 
@@ -203,9 +203,9 @@
             this.dataGridViewArt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewArt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewArt.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Imagen,
-            this.Update,
-            this.Delete});
+            this.Editar,
+            this.Eliminar,
+            this.VerImagen});
             this.dataGridViewArt.Location = new System.Drawing.Point(42, 150);
             this.dataGridViewArt.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewArt.Name = "dataGridViewArt";
@@ -213,24 +213,22 @@
             this.dataGridViewArt.RowTemplate.Height = 24;
             this.dataGridViewArt.Size = new System.Drawing.Size(522, 155);
             this.dataGridViewArt.TabIndex = 16;
+            this.dataGridViewArt.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewArt_CellContentClick);
             // 
-            // Imagen
+            // Editar
             // 
-            this.Imagen.HeaderText = "Ver Imagen";
-            this.Imagen.MinimumWidth = 6;
-            this.Imagen.Name = "Imagen";
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Name = "Editar";
             // 
-            // Update
+            // Eliminar
             // 
-            this.Update.HeaderText = "Update";
-            this.Update.MinimumWidth = 6;
-            this.Update.Name = "Update";
+            this.Eliminar.HeaderText = "Eliminar";
+            this.Eliminar.Name = "Eliminar";
             // 
-            // Delete
+            // VerImagen
             // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.MinimumWidth = 6;
-            this.Delete.Name = "Delete";
+            this.VerImagen.HeaderText = "Ver Imagen";
+            this.VerImagen.Name = "VerImagen";
             // 
             // ABM_Articulo
             // 
@@ -279,8 +277,8 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.DataGridView dataGridViewArt;
-        private System.Windows.Forms.DataGridViewButtonColumn Imagen;
-        private System.Windows.Forms.DataGridViewButtonColumn Update;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.DataGridViewButtonColumn Editar;
+        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
+        private System.Windows.Forms.DataGridViewButtonColumn VerImagen;
     }
 }

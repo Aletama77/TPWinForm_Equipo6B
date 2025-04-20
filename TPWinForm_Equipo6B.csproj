@@ -87,6 +87,12 @@
     <Compile Include="CrearMarca.Designer.cs">
       <DependentUpon>CrearMarca.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditarArticulo.Designer.cs">
+      <DependentUpon>EditarArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,18 +104,6 @@
     </Compile>
     <Compile Include="EditarMarca.Designer.cs">
       <DependentUpon>EditarMarca.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminacionMarca.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminacionMarca.Designer.cs">
-      <DependentUpon>EliminacionMarca.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarCategoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarCategoria.Designer.cs">
-      <DependentUpon>EliminarCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="PantallaPrincipal.cs">
       <SubType>Form</SubType>
@@ -139,17 +133,14 @@
     <EmbeddedResource Include="CrearMarca.resx">
       <DependentUpon>CrearMarca.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EditarArticulo.resx">
+      <DependentUpon>EditarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EditarCategoria.resx">
       <DependentUpon>EditarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditarMarca.resx">
       <DependentUpon>EditarMarca.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminacionMarca.resx">
-      <DependentUpon>EliminacionMarca.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarCategoria.resx">
-      <DependentUpon>EliminarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>

@@ -51,7 +51,31 @@ namespace TPWinForm_Equipo6B
             }
         }
 
+        private void botonEditarMarca_Click(object sender, EventArgs e)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("UPDATE MARCAS SET Descripcion = @descripcion WHERE Id = @id");
+                datos.agregarParametro("@descripcion", TxtMarca.Text);
+                datos.agregarParametro("@id", _idMarca);
+
+                datos.ejecutarAccion();
+
+                MessageBox.Show("Marca actualizada correctamente.");
+                this.Close(); 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al actualizar la marca: " + ex.Message);
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
 
 
+        }
     }
 }

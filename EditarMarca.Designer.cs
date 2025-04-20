@@ -62,6 +62,7 @@
             this.botonEditarMarca.TabIndex = 14;
             this.botonEditarMarca.Text = "Editar";
             this.botonEditarMarca.UseVisualStyleBackColor = true;
+            this.botonEditarMarca.Click += new System.EventHandler(this.botonEditarMarca_Click);
             // 
             // EditarMarca
             // 

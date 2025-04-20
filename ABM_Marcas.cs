@@ -99,6 +99,13 @@ namespace TPWinForm_Equipo6B
                 {
                     datos.cerrarConexion();
                 }
+            }else if (dataGridViewMarca.Columns[e.ColumnIndex].Name == "Editar")
+            {
+                int idMarca = Convert.ToInt32(dataGridViewMarca.Rows[e.RowIndex].Cells["Id"].Value);
+
+                EditarMarca editarMarca = new EditarMarca(idMarca); // envio el Id al const
+                editarMarca.Show();
+
             }
 
 

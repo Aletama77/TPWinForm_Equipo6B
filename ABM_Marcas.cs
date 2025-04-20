@@ -31,13 +31,33 @@ namespace TPWinForm_Equipo6B
         private void button4_Click(object sender, EventArgs e)
         {
             string marcaBuscada = textMarca.Text.Trim();
+            AccesoDatos datos = new AccesoDatos();
             if (string.IsNullOrEmpty(marcaBuscada))
             {
-                MessageBox.Show("Por favor ingrese un nombre de categoría para buscar.");
-                return;
-            }
 
-            AccesoDatos datos = new AccesoDatos();
+                try { 
+                string consulta = "SELECT Id, Descripcion  FROM MARCAS ";
+                datos.setearConsulta(consulta);
+                
+                datos.ejecutarLectura();
+
+                DataTable tabla = new DataTable();
+                tabla.Load(datos.Lector);
+                // Asignar el DataTable al DataGridView
+                dataGridViewMarca.DataSource = tabla;
+                dataGridViewMarca.Columns["Id"].Visible = false; // Ocultar la columna Id
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al buscar la categoría: " + ex.Message);
+                }
+                finally
+                {
+                    datos.cerrarConexion();
+                }
+            }
+            
+
 
             try
             {

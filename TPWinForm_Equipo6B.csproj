@@ -105,6 +105,12 @@
     <Compile Include="EditarMarca.Designer.cs">
       <DependentUpon>EditarMarca.cs</DependentUpon>
     </Compile>
+    <Compile Include="NuevaImagen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NuevaImagen.Designer.cs">
+      <DependentUpon>NuevaImagen.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantallaPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditarMarca.resx">
       <DependentUpon>EditarMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevaImagen.resx">
+      <DependentUpon>NuevaImagen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaPrincipal.resx">
       <DependentUpon>PantallaPrincipal.cs</DependentUpon>

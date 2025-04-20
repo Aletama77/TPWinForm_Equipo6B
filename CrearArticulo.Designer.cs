@@ -41,7 +41,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.AgregarImagenBoton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ConfirArticuloBoton
@@ -163,22 +162,11 @@
             this.comboBox2.Size = new System.Drawing.Size(175, 24);
             this.comboBox2.TabIndex = 35;
             // 
-            // AgregarImagenBoton
-            // 
-            this.AgregarImagenBoton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.AgregarImagenBoton.Location = new System.Drawing.Point(274, 110);
-            this.AgregarImagenBoton.Name = "AgregarImagenBoton";
-            this.AgregarImagenBoton.Size = new System.Drawing.Size(136, 41);
-            this.AgregarImagenBoton.TabIndex = 38;
-            this.AgregarImagenBoton.Text = "Agregar Imagen";
-            this.AgregarImagenBoton.UseVisualStyleBackColor = true;
-            // 
             // CrearArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.AgregarImagenBoton);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox5);
@@ -214,6 +202,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button AgregarImagenBoton;
     }
 }

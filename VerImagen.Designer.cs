@@ -32,6 +32,10 @@
             this.lblUrl = new System.Windows.Forms.Label();
             this.btnconfirmar = new System.Windows.Forms.Button();
             this.txtUrlActual = new System.Windows.Forms.TextBox();
+            this.btnSiguiente = new System.Windows.Forms.Button();
+            this.btnAnterior = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,11 +74,55 @@
             this.txtUrlActual.Size = new System.Drawing.Size(421, 22);
             this.txtUrlActual.TabIndex = 3;
             // 
+            // btnSiguiente
+            // 
+            this.btnSiguiente.Location = new System.Drawing.Point(465, 98);
+            this.btnSiguiente.Name = "btnSiguiente";
+            this.btnSiguiente.Size = new System.Drawing.Size(115, 38);
+            this.btnSiguiente.TabIndex = 4;
+            this.btnSiguiente.Text = "Siguiente";
+            this.btnSiguiente.UseVisualStyleBackColor = true;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click_1);
+            // 
+            // btnAnterior
+            // 
+            this.btnAnterior.Location = new System.Drawing.Point(465, 154);
+            this.btnAnterior.Name = "btnAnterior";
+            this.btnAnterior.Size = new System.Drawing.Size(115, 38);
+            this.btnAnterior.TabIndex = 5;
+            this.btnAnterior.Text = "Anterior";
+            this.btnAnterior.UseVisualStyleBackColor = true;
+            this.btnAnterior.Click += new System.EventHandler(this.btnAnterior_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(651, 28);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 59);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Nueva Imagen";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(651, 114);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(117, 57);
+            this.button2.TabIndex = 7;
+            this.button2.Text = "Eliminar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // VerImagen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAnterior);
+            this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.txtUrlActual);
             this.Controls.Add(this.btnconfirmar);
             this.Controls.Add(this.lblUrl);
@@ -93,5 +141,9 @@
         private System.Windows.Forms.Label lblUrl;
         private System.Windows.Forms.Button btnconfirmar;
         private System.Windows.Forms.TextBox txtUrlActual;
+        private System.Windows.Forms.Button btnSiguiente;
+        private System.Windows.Forms.Button btnAnterior;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

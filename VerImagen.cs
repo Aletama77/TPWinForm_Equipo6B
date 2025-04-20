@@ -15,11 +15,14 @@ namespace TPWinForm_Equipo6B
     {
         private List<(int Id, string Url)> imagenes;
         private int indiceActual = 0;
+        private int _idarticulo;
+        private int _idArticulo;
 
         public VerImagen(int idArticulo)
         {
             InitializeComponent();
             CargarImagenes(idArticulo);
+            _idarticulo=idArticulo;
         }
 
         private void CargarImagenes(int idArticulo)
@@ -46,8 +49,7 @@ namespace TPWinForm_Equipo6B
                 }
                 else
                 {
-                    MessageBox.Show("Este artículo no tiene imágenes.");
-                    this.Close();
+                    
                 }
             }
             catch (Exception ex)
@@ -118,6 +120,96 @@ namespace TPWinForm_Equipo6B
             catch (Exception ex)
             {
                 MessageBox.Show("Error al actualizar la URL de la imagen: " + ex.Message);
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        private void btnSiguiente_Click_1(object sender, EventArgs e)
+        {
+            if (indiceActual < imagenes.Count - 1)
+            {
+                indiceActual++;
+                MostrarImagen(indiceActual);
+            }
+            else
+            {
+                MessageBox.Show("Ya estás en la última imagen.");
+            }
+        }
+
+        private void btnAnterior_Click_1(object sender, EventArgs e)
+        {
+            if (indiceActual > 0)
+            {
+                indiceActual--;
+                MostrarImagen(indiceActual);
+            }
+            else
+            {
+                MessageBox.Show("Ya estás en la primera imagen.");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            NuevaImagen nuevaImagen = new NuevaImagen(_idarticulo);
+            nuevaImagen.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (imagenes == null || imagenes.Count == 0)
+            {
+                MessageBox.Show("No hay imágenes para eliminar.");
+                return;
+            }
+
+            var imagen = imagenes[indiceActual];
+
+            DialogResult confirm = MessageBox.Show(
+                "¿Estás seguro que querés eliminar esta imagen?",
+                "Confirmar eliminación",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
+
+            if (confirm != DialogResult.Yes)
+                return;
+
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.setearConsulta("DELETE FROM IMAGENES WHERE Id = @id");
+                datos.agregarParametro("@id", imagen.Id);
+                datos.ejecutarAccion();
+
+                MessageBox.Show("Imagen eliminada correctamente.");
+
+                // Eliminar de la lista local y actualizar vista
+                imagenes.RemoveAt(indiceActual);
+
+                if (imagenes.Count == 0)
+                {
+                    pictureBox1.Image = null;
+                    txtUrlActual.Text = "";
+                    MessageBox.Show("No quedan más imágenes.");
+                    return;
+                }
+
+                // Ajustar el índice y mostrar siguiente disponible
+                if (indiceActual >= imagenes.Count)
+                    indiceActual = imagenes.Count - 1;
+
+                MostrarImagen(indiceActual);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar la imagen: " + ex.Message);
             }
             finally
             {

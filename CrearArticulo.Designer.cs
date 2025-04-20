@@ -41,20 +41,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.AgregarImagenBoton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ConfirArticuloBoton
             // 
             this.ConfirArticuloBoton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ConfirArticuloBoton.Location = new System.Drawing.Point(637, 39);
+            this.ConfirArticuloBoton.Location = new System.Drawing.Point(274, 47);
             this.ConfirArticuloBoton.Name = "ConfirArticuloBoton";
             this.ConfirArticuloBoton.Size = new System.Drawing.Size(114, 38);
             this.ConfirArticuloBoton.TabIndex = 1;
             this.ConfirArticuloBoton.Text = "Confirmar";
             this.ConfirArticuloBoton.UseVisualStyleBackColor = true;
+            this.ConfirArticuloBoton.Click += new System.EventHandler(this.ConfirArticuloBoton_Click);
             // 
             // textBox5
             // 
@@ -94,9 +93,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(50, 212);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(56, 16);
+            this.label6.Size = new System.Drawing.Size(45, 16);
             this.label6.TabIndex = 27;
-            this.label6.Text = "IdMarca";
+            this.label6.Text = "Marca";
             // 
             // label5
             // 
@@ -104,9 +103,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(50, 273);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(77, 16);
+            this.label5.Size = new System.Drawing.Size(66, 16);
             this.label5.TabIndex = 26;
-            this.label5.Text = "IdCategoría";
+            this.label5.Text = "Categoría";
             // 
             // label4
             // 
@@ -164,30 +163,12 @@
             this.comboBox2.Size = new System.Drawing.Size(175, 24);
             this.comboBox2.TabIndex = 35;
             // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox1.Location = new System.Drawing.Point(351, 47);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 22);
-            this.textBox1.TabIndex = 37;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(348, 26);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(51, 16);
-            this.label7.TabIndex = 36;
-            this.label7.Text = "Código";
-            // 
             // AgregarImagenBoton
             // 
             this.AgregarImagenBoton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.AgregarImagenBoton.Location = new System.Drawing.Point(351, 110);
+            this.AgregarImagenBoton.Location = new System.Drawing.Point(274, 110);
             this.AgregarImagenBoton.Name = "AgregarImagenBoton";
-            this.AgregarImagenBoton.Size = new System.Drawing.Size(129, 24);
+            this.AgregarImagenBoton.Size = new System.Drawing.Size(136, 41);
             this.AgregarImagenBoton.TabIndex = 38;
             this.AgregarImagenBoton.Text = "Agregar Imagen";
             this.AgregarImagenBoton.UseVisualStyleBackColor = true;
@@ -198,8 +179,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.AgregarImagenBoton);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox5);
@@ -235,8 +214,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button AgregarImagenBoton;
     }
 }

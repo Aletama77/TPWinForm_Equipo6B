@@ -12,6 +12,8 @@ namespace TPWinForm_Equipo6B
 {
     public partial class ABM_Articulo : Form
     {
+        private string urlImagen;
+
         public ABM_Articulo()
         {
             InitializeComponent();
@@ -248,6 +250,15 @@ namespace TPWinForm_Equipo6B
                 EditarArticulo editararticulo = new EditarArticulo(idArticulo);
                 editararticulo.Show();
 
+            }else if (dataGridViewArt.Columns[e.ColumnIndex].Name == "VerImagen")
+            {
+                int idArticulo = Convert.ToInt32(dataGridViewArt.Rows[e.RowIndex].Cells["Id"].Value);
+
+                
+
+
+                VerImagen verimagenventana = new VerImagen(idArticulo);
+                verimagenventana.Show();    
             }
         }
     }

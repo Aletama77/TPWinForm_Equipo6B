@@ -81,7 +81,7 @@ namespace TPWinForm_Equipo6B
                 tabla.Load(datos.Lector);
                 // Asignar el DataTable al DataGridView
                 dataGridViewCat.DataSource = tabla;
-                dataGridViewCat.Columns["Id"].Visible = true; // Ocultar la columna Id
+                dataGridViewCat.Columns["Id"].Visible = false; // Ocultar la columna Id
             }
             catch (Exception ex)
             {

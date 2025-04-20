@@ -45,7 +45,7 @@ namespace TPWinForm_Equipo6B
 
                 try
                 {
-                    string consulta = "SELECT A.Id, M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id"; 
+                    string consulta = "SELECT A.Id, M.Descripcion AS 'Marca', A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion AS 'Categoria'  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id"; 
                     datos.setearConsulta(consulta);
 
                     datos.ejecutarLectura();
@@ -70,7 +70,7 @@ namespace TPWinForm_Equipo6B
             {
                 try
                 {
-                    string consulta = "SELECT A.Id, M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE M.Descripcion LIKE @descripcion";
+                    string consulta = "SELECT A.Id, M.Descripcion AS 'Marca', A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion AS 'Categoria'  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE M.Descripcion LIKE @descripcion";
                     datos.setearConsulta(consulta);
                     datos.agregarParametro("@descripcion", "%" + marcaBuscada + "%");
                     datos.ejecutarLectura();
@@ -93,7 +93,7 @@ namespace TPWinForm_Equipo6B
             {
                 try
                 {
-                    string consulta = "SELECT A.Id, M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE A.Descripcion LIKE @descripcion";
+                    string consulta = "SELECT A.Id, M.Descripcion AS 'Marca', A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion AS 'Categoria'  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE A.Descripcion LIKE @descripcion";
                     datos.setearConsulta(consulta);
                     datos.agregarParametro("@descripcion", "%" + descripcionBuscada + "%");
                     datos.ejecutarLectura();
@@ -116,7 +116,7 @@ namespace TPWinForm_Equipo6B
             {
                 try
                 {
-                    string consulta = "SELECT A.Id, M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE A.Codigo LIKE @descripcion";
+                    string consulta = "SELECT A.Id, M.Descripcion AS 'Marca', A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion AS 'Categoria'  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE A.Codigo LIKE @descripcion";
                     datos.setearConsulta(consulta);
                     datos.agregarParametro("@descripcion", "%" + codigoBuscada + "%");
                     datos.ejecutarLectura();
@@ -139,7 +139,7 @@ namespace TPWinForm_Equipo6B
             {
                 try
                 {
-                    string consulta = "SELECT A.Id, M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE A.Nombre LIKE @descripcion";
+                    string consulta = "SELECT A.Id, M.Descripcion AS 'Marca', A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion AS 'Categoria'  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE A.Nombre LIKE @descripcion";
                     datos.setearConsulta(consulta);
                     datos.agregarParametro("@descripcion", "%" + nombreBuscada + "%");
                     datos.ejecutarLectura();
@@ -162,7 +162,7 @@ namespace TPWinForm_Equipo6B
             {
                 try
                 {
-                    string consulta = "SELECT A.Id, M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE A.Precio LIKE @descripcion";
+                    string consulta = "SELECT A.Id, M.Descripcion AS 'Marca', A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion AS 'Categoria'  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE A.Precio LIKE @descripcion";
                     datos.setearConsulta(consulta);
                     datos.agregarParametro("@descripcion", "%" + precioBuscada + "%");
                     datos.ejecutarLectura();
@@ -186,7 +186,7 @@ namespace TPWinForm_Equipo6B
             {
                 try
                 {
-                    string consulta = "SELECT A.Id, M.Descripcion, A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE C.Descripcion LIKE @descripcion";
+                    string consulta = "SELECT A.Id, M.Descripcion AS 'Marca', A.Descripcion, A.Codigo, A.Nombre, A.Precio, C.Descripcion AS 'Categoria'  FROM ARTICULOS A LEFT JOIN MARCAS M ON A.IdMarca = M.Id LEFT JOIN CATEGORIAS C ON A.IdCategoria = C.Id WHERE C.Descripcion LIKE @descripcion";
                     datos.setearConsulta(consulta);
                     datos.agregarParametro("@descripcion", "%" + categoriaBuscada + "%");
                     datos.ejecutarLectura();
